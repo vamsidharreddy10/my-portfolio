@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>D. Vamsidhar Reddy – Web Developer Resume</title>
+  <style>
+    :root{
+      --bg:#f7f2ea;
+      --paper:#fffaf3;
+      --ink:#2b2b2b;
+      --muted:#6b5e4a;
+      --accent:#8a6a3f;
+      --chip:#eee2cf;
+      --line:#e8dcc9;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";}
+    .page{max-width:1024px;margin:24px auto;padding:0 16px;}
+    .sheet{background:var(--paper);box-shadow:0 10px 25px rgba(0,0,0,.08);border-radius:18px;overflow:hidden;border:1px solid var(--line);animation: fadeIn 1.2s ease-in-out;}
+
+    header{display:grid;grid-template-columns: 1.2fr 1fr;gap:24px;align-items:center;padding:28px 28px 18px;border-bottom:1px solid var(--line);background: linear-gradient(180deg, #fffdf8 0%, #fff8ee 100%);animation: slideDown 1s ease-out;}
+
+    .name{font-size:clamp(28px,5vw,40px);font-weight:800;letter-spacing:0.3px;animation: fadeInUp 1.5s ease;}
+    .role{color:var(--muted);font-weight:600;margin-top:6px;animation: fadeInUp 1.7s ease;}
+    .tagline{margin-top:10px;line-height:1.55;color:#4b4338;animation: fadeInUp 2s ease;}
+
+    .contacts{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;justify-content:flex-end;}
+    .contact{display:inline-flex;gap:8px;align-items:center;background:var(--chip);border:1px solid var(--line);padding:8px 10px;border-radius:999px;font-size:14px;opacity:0;transform:translateY(10px);animation: fadeInUp 1s ease forwards;}
+    .contact:nth-child(1){animation-delay:0.5s}
+    .contact:nth-child(2){animation-delay:0.7s}
+    .contact:nth-child(3){animation-delay:0.9s}
+    .contact:nth-child(4){animation-delay:1.1s}
+    .contact:nth-child(5){animation-delay:1.3s}
+
+    .contact a{color:inherit;text-decoration:none}
+    .body{display:grid;grid-template-columns: 1fr 2fr;gap:28px;padding:22px 28px 32px}
+
+    .col h2{font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:22px 0 10px;position:relative;animation: fadeIn 1s ease;}
+
+    .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 14px 8px;animation: zoomIn 0.6s ease;}
+
+    .list{margin:0;padding-left:18px}
+    .list li{margin:6px 0;animation: fadeInUp 0.8s ease;}
+
+    .pillwrap{display:flex;flex-wrap:wrap;gap:8px}
+    .pill{background:var(--chip);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:13px;animation: popIn 0.5s ease;}
+
+    .section{margin-top:16px}
+    .entry{margin:12px 0 10px;animation: fadeInUp 1s ease;}
+    .entry .title{font-weight:700}
+    .entry .meta{font-size:13px;color:#6a5d4a;margin-top:2px}
+    .entry .bullets{margin:6px 0 0 18px}
+
+    .projects .pitem{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;margin:10px 0;animation: fadeInUp 1s ease;}
+    .projects .pitem .ptitle{font-weight:700}
+    .projects .pitem .pdesc{margin:6px 0 0}
+
+    footer{padding:12px 28px 24px;border-top:1px solid var(--line);font-size:12px;color:#6b5e4a;background:#fffef8;animation: fadeIn 1s ease;}
+
+    /* Animations */
+    @keyframes fadeIn {from{opacity:0} to{opacity:1}}
+    @keyframes fadeInUp {from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:translateY(0)}}
+    @keyframes slideDown {from{opacity:0; transform:translateY(-30px)} to{opacity:1; transform:translateY(0)}}
+    @keyframes zoomIn {from{opacity:0; transform:scale(0.95)} to{opacity:1; transform:scale(1)}}
+    @keyframes popIn {0%{opacity:0; transform:scale(0.7)} 80%{opacity:1; transform:scale(1.05)} 100%{transform:scale(1)}}
+
+    /* Responsive */
+    @media (max-width: 860px){
+      header{grid-template-columns: 1fr;}
+      .contacts{justify-content:flex-start}
+      .body{grid-template-columns: 1fr}
+    }
+
+    /* Print styles */
+    @media print{
+      body{background:white}
+      .page{margin:0;}
+      .sheet{box-shadow:none;border:none;border-radius:0}
+      header,footer{background:white;border-color:#ddd}
+      .contact{border:1px solid #ddd;background:#f7f7f7}
+      a{color:inherit;text-decoration:none}
+      *{animation:none !important}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="sheet" role="document" aria-label="Resume">
+      <!-- Header -->
+      <header>
+        <div>
+          <div class="name">D. Vamsidhar <span style="color:var(--accent)">Reddy</span></div>
+          <div class="role">Web Developer</div>
+          <p class="tagline">
+            Passionate Frontend Developer & Programming Enthusiast with a strong foundation in C, C++, Python, HTML, CSS, JavaScript, and React.js. Experienced in building responsive, user‑friendly websites, e‑commerce platforms, and interactive dashboards. Highly motivated to learn full‑stack development and contribute to impactful projects with clean code, scalable design, and problem‑solving skills.
+          </p>
+        </div>
+        <div class="contacts" aria-label="Contact Information">
+          <div class="contact">📍 Hyderabad, Telangana</div>
+          <div class="contact">📞 <a href="tel:+919381860715">9381860715</a></div>
+          <div class="contact">✉️ <a href="mailto:nanivamsi10@gamil.com">nanivamsi10@gamil.com</a></div>
+          <div class="contact">🌐 <a href="https://vamsinani.my.canva.site/vamsi-nani-wrestler" target="_blank" rel="noopener">Portfolio</a></div>
+          <div class="contact">🐙 <a href="https://github.com/vamsidharreddy10" target="_blank" rel="noopener">github.com/vamsidharreddy10</a></div>
+        </div>
+      </header>
+
+      <section class="body">
+        <!-- Left column -->
+        <aside class="col" aria-label="Sidebar">
+          <h2>Skills</h2>
+          <div class="card">
+            <div class="section">
+              <strong>Programming Languages</strong>
+              <div class="pillwrap" style="margin-top:8px">
+                <span class="pill">C</span>
+                <span class="pill">C++</span>
+                <span class="pill">Python</span>
+                <span class="pill">JavaScript</span>
+              </div>
+            </div>
+            <div class="section">
+              <strong>Web Development</strong>
+              <div class="pillwrap" style="margin-top:8px">
+                <span class="pill">HTML5</span>
+                <span class="pill">CSS3</span>
+                <span class="pill">ES6+</span>
+                <span class="pill">React.js</span>
+              </div>
+            </div>
+            <div class="section">
+              <strong>Tools & Platforms</strong>
+              <div class="pillwrap" style="margin-top:8px">
+                <span class="pill">VS Code</span>
+                <span class="pill">Git / GitHub</span>
+                <span class="pill">Netlify</span>
+                <span class="pill">Vercel</span>
+              </div>
+            </div>
+            <div class="section">
+              <strong>Other</strong>
+              <div class="pillwrap" style="margin-top:8px">
+                <span class="pill">API Integration</span>
+                <span class="pill">Responsive Design</span>
+                <span class="pill">UI/UX Basics</span>
+              </div>
+            </div>
+          </div>
+
+          <h2>Education</h2>
+          <div class="card">
+            <div class="entry">
+              <div class="title">B.Com (Computer)</div>
+              <div class="meta">Osmania University • Amberpet, Hyderabad, Telangana</div>
+            </div>
+          </div>
+
+          <h2>Soft Skills</h2>
+          <div class="card">
+            <ul class="list">
+              <li>Problem‑Solving & Debugging</li>
+              <li>Team Collaboration</li>
+              <li>Continuous Learning</li>
+              <li>Time Management</li>
+            </ul>
+          </div>
+
+          <h2>Interests</h2>
+          <div class="card">
+            <div class="pillwrap">
+              <span class="pill">Full‑Stack Development</span>
+              <span class="pill">Open Source</span>
+              <span class="pill">Software Challenges</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right column -->
+        <section class="col" aria-label="Main Content">
+          <h2>Experience</h2>
+          <div class="card">
+            <div class="entry">
+              <div class="title">Freelance Web Developer — Remote</div>
+              <div class="meta">Jul 2025 – Present</div>
+              <ul class="bullets">
+                <li>Developing projects such as Movie Ticket Booking Website, Weather Dashboard, and StudentSupportHub.</li>
+                <li>Using JavaScript APIs, localStorage, and React.js to build interactive applications.</li>
+                <li>Applying clean coding practices while learning new technologies.</li>
+              </ul>
+            </div>
+            <div class="entry">
+              <div class="title">ABC Tech Solutions — Frontend Developer Intern (Hyderabad)</div>
+              <div class="meta">Jan 2024 – Jun 2024</div>
+              <ul class="bullets">
+                <li>Designed and developed responsive pages using HTML, CSS, and JavaScript.</li>
+                <li>Integrated REST APIs for dynamic data fetching in collaboration with backend team.</li>
+                <li>Improved page load time by 20% through optimized code and assets.</li>
+                <li>Assisted in cross‑browser and mobile testing/debugging.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2>Projects</h2>
+          <div class="projects">
+            <div class="pitem">
+              <div class="ptitle">Fresh Chicken Market Website</div>
+              <div class="pdesc">Responsive e‑commerce website with cart, login/register, category filter, and dark mode. Implemented localStorage‑based cart and built an admin dashboard for orders/products.</div>
+            </div>
+            <div class="pitem">
+              <div class="ptitle">Movie Ticket Booking Website</div>
+              <div class="pdesc">HTML, CSS, JavaScript app featuring login/register, movie details, booking form, and dummy payment.</div>
+            </div>
+            <div class="pitem">
+              <div class="ptitle">StudentSupportHub</div>
+              <div class="pdesc">Educational website addressing student problems with interactive sections, including Join Us, Donate, and Volunteer features with mobile‑friendly UI.</div>
+            </div>
+            <div class="pitem">
+              <div class="ptitle">Weather Dashboard</div>
+              <div class="pdesc">Real‑time weather dashboard using JavaScript and weather APIs with city search, forecast, and unit conversion.</div>
+            </div>
+          </div>
+
+          <h2>Achievements</h2>
+          <div class="card">
+            <ul class="list">
+              <li>Built and deployed multiple personal web projects on GitHub.</li>
+              <li>Self‑learned frontend technologies and programming languages.</li>
+              <li>Active GitHub contributor with projects showcasing real‑world applications.</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <footer>
+        <em>Note:</em> This HTML is structured, responsive, and print‑friendly. Save as PDF via your browser (Print → Save as PDF) for sharing.
+      </footer>
+    </section>
+    <img src="img/cv1.jpg" alt="cv-view">
+    <img src="img/cv2.jpg" alt="cv-view">
+  </main>
+  <style>
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    img {
+        padding: 0;
+        border-radius: 8px;
+    }
+  </style>
+</body>
+</html>
